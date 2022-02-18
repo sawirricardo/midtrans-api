@@ -1,7 +1,5 @@
 <?php
 
-use Pest\Plugins\Environment;
-use Sawirricardo\Midtrans\Dto\TransactionDto;
 use Sawirricardo\Midtrans\Midtrans;
 
 it('can create a snap transaction', function () {
@@ -10,7 +8,7 @@ it('can create a snap transaction', function () {
             'transaction_details' => [
                 'order_id' => 'test123',
                 'gross_amount' => 10000,
-            ]
+            ],
         ]));
     expect($snapToken->redirect_url)->not->toBeNull();
     expect($snapToken->token)->not->toBeNull();

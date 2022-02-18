@@ -36,6 +36,7 @@ class Snap
                 'Authorization' => 'Basic ' . $this->authString,
             ],
         ]);
+
         return new SnapTokenDto($response->toArray());
     }
 }

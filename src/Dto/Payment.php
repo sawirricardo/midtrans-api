@@ -6,6 +6,6 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class Payment extends DataTransferObject
 {
-	public string $en;
-	public string $id;
+    public string $en;
+    public string $id;
 }

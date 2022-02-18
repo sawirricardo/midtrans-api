@@ -8,6 +8,7 @@ use Symfony\Component\HttpClient\HttpClient;
 class Payment
 {
     private $baseUrl;
+
     public function __construct($baseUrl)
     {
         $this->baseUrl = $baseUrl;
@@ -22,6 +23,7 @@ class Payment
                 'Content-Type' => 'application/json',
             ],
         ]);
+
         return new TransactionStatus($response->toArray());
     }
 }

@@ -6,6 +6,6 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class Inquiry extends DataTransferObject
 {
-	public string $en;
-	public string $id;
+    public string $en;
+    public string $id;
 }

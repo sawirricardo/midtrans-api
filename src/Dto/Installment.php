@@ -6,6 +6,6 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class Installment extends DataTransferObject
 {
-	public bool $required;
-	public Terms $terms;
+    public bool $required;
+    public Terms $terms;
 }

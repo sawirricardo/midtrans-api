@@ -8,11 +8,11 @@ class TransactionDto extends DataTransferObject
 {
     public TransactionDetails $transaction_details;
 
-    /** @var \Sawirricardo\Midtrans\Dto\ItemDetails[] $item_details */
+    /** @var \Sawirricardo\Midtrans\Dto\ItemDetails[] */
     public ?array $item_details = null;
     public ?CustomerDetails $customer_details = null;
 
-    /** @var string[] $enabled_payments */
+    /** @var string[] */
     public ?array $enabled_payments = null;
     public ?CreditCard $credit_card = null;
     public ?BcaVa $bca_va = null;

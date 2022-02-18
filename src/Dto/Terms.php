@@ -6,18 +6,18 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class Terms extends DataTransferObject
 {
-    /** @var int[] $bni */
+    /** @var int[] */
     public ?array $bni;
 
-    /** @var int[] $mandiri */
+    /** @var int[] */
     public ?array $mandiri;
 
-    /** @var int[] $cimb */
+    /** @var int[] */
     public ?array $cimb;
 
-    /** @var int[] $bca */
+    /** @var int[] */
     public ?array $bca;
 
-    /** @var int[] $offline */
+    /** @var int[] */
     public ?array $offline;
 }

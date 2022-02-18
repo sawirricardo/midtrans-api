@@ -6,5 +6,5 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class BniVa extends DataTransferObject
 {
-	public string $va_number;
+    public string $va_number;
 }
