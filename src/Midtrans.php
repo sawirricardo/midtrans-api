@@ -46,7 +46,7 @@ class Midtrans
         );
     }
 
-    public function transactionStatus($version = 2)
+    public function payment($version = 2)
     {
         return new Payment(
             $this->isProduction ? self::PRODUCTION_BASE_URL : self::SANDBOX_BASE_URL . "/v$version",
