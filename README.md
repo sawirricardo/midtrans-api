@@ -5,14 +5,15 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/sawirricardo/midtrans-api.svg?style=flat-square)](https://packagist.org/packages/sawirricardo/midtrans-api)
 
 Interact with Midtrans API. Included Snap and its Core API.
+If you use Laravel, you can use [`sawirricardo/laravel-midtrans`](https://github.com/sawirricardo/laravel-midtrans) package, which has more exciting features by default
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/midtrans-api.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/midtrans-api)
+Investing on this package is defintely a good move from you. You can support by donating to my wallet
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+-   Wallet 0x3F20d326E5DA8ab6D27d9b2DdD350baB1e589d87
+-   PayPal https://www.paypal.com/paypalme/sawirricardo.
+-   BCA 8330123584
 
 ## Installation
 
@@ -42,7 +43,7 @@ $snapToken = $midtransClient->snap()->create(new \Sawirricardo\Midtrans\Dto\Tran
 echo $snapToken->token;
 echo $snapToken->redirect_url;
 
-$transactionStatus = n
+$transactionStatus = $midtransClient->payment()->getStatus('your-order-id-or-transaction-id');
 ```
 
 ## Testing
