@@ -8,10 +8,12 @@ use Symfony\Component\HttpClient\HttpClient;
 class Payment
 {
     private $baseUrl;
+    private $authString;
 
-    public function __construct($baseUrl)
+    public function __construct($baseUrl, $authString)
     {
         $this->baseUrl = $baseUrl;
+        $this->authString = $authString;
     }
 
     public function getStatus($orderIdOrTransactionId)
@@ -21,6 +23,7 @@ class Payment
             'headers' => [
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/json',
+                'Authorization' => 'Basic ' . $this->authString,
             ],
         ]);
 

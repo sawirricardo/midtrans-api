@@ -49,6 +49,7 @@ class Midtrans
     public function payment($version = 2)
     {
         return new Payment(
+            $this->getAuthString(),
             $this->isProduction ? self::PRODUCTION_BASE_URL : self::SANDBOX_BASE_URL . "/v$version",
             $this->is3ds,
             $this->isSanitized,
