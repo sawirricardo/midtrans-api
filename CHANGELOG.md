@@ -2,6 +2,11 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## v0.1.2 - 2022-02-19
+
+- FIXED include authstring to payment
+- **Full Changelog**: https://github.com/sawirricardo/midtrans-api/compare/0.1.1...0.1.2
+
 ## v0.1.1 - 2022-02-19
 
 - Changed transaction status method to payment
