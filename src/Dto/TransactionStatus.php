@@ -25,4 +25,5 @@ class TransactionStatus extends DataTransferObject
     public ?string $card_type = null;
     public ?string $bank = null;
     public ?string $approval_code = null;
+    public ?string $settlement_time = null;
 }
