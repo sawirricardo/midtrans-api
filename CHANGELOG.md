@@ -2,6 +2,10 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## v1.0.0 - 2022-04-19
+
+Finalize release use saloon package
+
 ## v0.1.4 - 2022-03-11
 
 - Fixed settlement_time not exists
