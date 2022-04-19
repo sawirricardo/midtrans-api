@@ -8,11 +8,11 @@ class Midtrans
     public const SNAP_JS_PRODUCTION_URL = 'https://app.midtrans.com/snap/snap.js';
 
     public function __construct(
-        private string $serverKey,
-        private string $clientKey,
-        private bool $isProduction = false,
-        private bool $is3ds = true,
-        private bool $isSanitized = true,
+        protected string $serverKey,
+        protected string $clientKey,
+        protected bool $isProduction = false,
+        protected bool $is3ds = true,
+        protected bool $isSanitized = true,
     ) {
     }
 
