@@ -2,31 +2,22 @@
 
 namespace Sawirricardo\Midtrans;
 
+use Sawirricardo\Midtrans\Connector\PaymentConnector;
 use Sawirricardo\Midtrans\Dto\TransactionStatus;
-use Symfony\Component\HttpClient\HttpClient;
+use Sawirricardo\Midtrans\Request\GetPaymentStatusRequest;
 
 class Payment
 {
-    private $baseUrl;
-    private $authString;
-
-    public function __construct($baseUrl, $authString)
+    public function __construct(private string $serverKey, private bool $isProduction = false, private int $version = 2)
     {
-        $this->baseUrl = $baseUrl;
-        $this->authString = $authString;
     }
 
-    public function getStatus($orderIdOrTransactionId)
+    public function getStatus($orderIdOrTransactionId): TransactionStatus
     {
-        $client = HttpClient::create();
-        $response = $client->request('GET', $this->baseUrl . '/' . $orderIdOrTransactionId . '/status', [
-            'headers' => [
-                'Accept' => 'application/json',
-                'Content-Type' => 'application/json',
-                'Authorization' => 'Basic ' . $this->authString,
-            ],
-        ]);
+        $response = (new PaymentConnector($this->serverKey, $this->isProduction))
+            ->request(new GetPaymentStatusRequest($orderIdOrTransactionId))
+            ->send();
 
-        return new TransactionStatus($response->toArray());
+        return $response->dto();
     }
 }
