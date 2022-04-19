@@ -1,5 +1,7 @@
 <?php
 
+namespace Sawirricardo\Midtrans\Request;
+
 use Sammyjo20\Saloon\Constants\Saloon;
 use Sammyjo20\Saloon\Http\SaloonRequest;
 use Sammyjo20\Saloon\Http\SaloonResponse;
