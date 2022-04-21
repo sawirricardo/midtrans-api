@@ -12,12 +12,12 @@ class Payment
     {
     }
 
-    public function status($orderIdOrTransactionId): ?TransactionStatus
+    public function status($orderIdOrTransactionId): TransactionStatus
     {
         $response = (new PaymentConnector($this->serverKey, $this->isProduction))
             ->request(new GetPaymentStatusRequest($orderIdOrTransactionId))
             ->send();
 
-        return $response->dto();
+        return $response->dto() ?? new TransactionStatus($response->json());
     }
 }
