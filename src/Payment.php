@@ -12,7 +12,7 @@ class Payment
     {
     }
 
-    public function getStatus($orderIdOrTransactionId): TransactionStatus
+    public function Status($orderIdOrTransactionId): TransactionStatus
     {
         $response = (new PaymentConnector($this->serverKey, $this->isProduction))
             ->request(new GetPaymentStatusRequest($orderIdOrTransactionId))
