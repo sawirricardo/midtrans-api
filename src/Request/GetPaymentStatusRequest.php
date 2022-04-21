@@ -17,6 +17,10 @@ class GetPaymentStatusRequest extends SaloonRequest
     protected ?string $method = Saloon::GET;
     protected ?string $connector = PaymentConnector::class;
 
+    public function __construct(private string $orderIdOrTransactionId)
+    {
+    }
+
     public function defineEndpoint(): string
     {
         return "/transactions/{$this->orderIdOrTransactionId}/status" ;
