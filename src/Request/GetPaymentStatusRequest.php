@@ -23,7 +23,7 @@ class GetPaymentStatusRequest extends SaloonRequest
 
     public function defineEndpoint(): string
     {
-        return "/transactions/{$this->orderIdOrTransactionId}/status" ;
+        return "/{$this->orderIdOrTransactionId}/status" ;
     }
 
     protected function castToDto(SaloonResponse $response): object
