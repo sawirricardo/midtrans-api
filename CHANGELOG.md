@@ -2,6 +2,10 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## v1.0.2 - 2022-04-21
+
+hotfix
+
 ## v1.0.1 - 2022-04-19
 
 changed to protected
