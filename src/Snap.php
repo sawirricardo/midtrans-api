@@ -13,7 +13,7 @@ class Snap
     {
     }
 
-    public function create(TransactionDto $transaction): SnapTokenDto
+    public function create(TransactionDto $transaction): ?SnapTokenDto
     {
         $response = (new SnapConnector($this->serverKey, $this->isProduction))
             ->request(
