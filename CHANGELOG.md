@@ -2,6 +2,10 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## v1.0.4 - 2022-04-21
+
+hotifx dont use always throws on error
+
 ## v1.0.3 - 2022-04-21
 
 hotfix missing constructor
