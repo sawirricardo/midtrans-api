@@ -2,6 +2,10 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## v1.0.6 - 2022-04-21
+
+hotfix
+
 ## v1.0.5 - 2022-04-21
 
 hotfix
