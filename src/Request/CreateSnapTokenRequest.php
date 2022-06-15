@@ -23,6 +23,15 @@ class CreateSnapTokenRequest extends SaloonRequest
         return '/transactions';
     }
 
+    public function defaultData(): array
+    {
+        return [
+            'credit_card' => [
+                "secure" => true,
+            ],
+        ];
+    }
+
     protected function castToDto(SaloonResponse $response): object
     {
         return new SnapTokenDto($response->json());

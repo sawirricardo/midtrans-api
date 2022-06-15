@@ -17,7 +17,7 @@ class Snap
     {
         $response = (new SnapConnector($this->serverKey, $this->isProduction))
             ->request(
-                (new CreateSnapTokenRequest())->setData($transaction->toArray())
+                (new CreateSnapTokenRequest())->mergeData($transaction->toArray())
             )
             ->send();
 
