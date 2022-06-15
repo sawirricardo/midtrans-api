@@ -2,6 +2,10 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## 1.0.8 - 2022-06-15
+
+add credit_card secure by default
+
 ## v1.0.7 - 2022-04-21
 
 hotfix link mistaken
