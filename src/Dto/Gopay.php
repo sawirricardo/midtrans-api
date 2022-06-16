@@ -6,6 +6,6 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class Gopay extends DataTransferObject
 {
-    public bool $enable_callback;
-    public ?string $callback_url = null;
+    public bool $enable_callback = true;
+    public ?string $callback_url = 'http://gopay.com';
 }
