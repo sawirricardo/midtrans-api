@@ -2,6 +2,10 @@
 
 All notable changes to `midtrans-api` will be documented in this file.
 
+## 1.0.10 - 2022-12-08
+
+bugfix credit card should be allowed to use secure only
+
 ## 1.0.9 - 2022-06-16
 
 - modify gopay object
