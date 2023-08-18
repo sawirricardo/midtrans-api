@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "sammyjo20/saloon": "^1.0",
+        "saloonphp/saloon": "^1.0",
         "spatie/data-transfer-object": "^1.0 | ^2.0 | ^3.7"
     },
     "require-dev": {
