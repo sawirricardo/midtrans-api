@@ -6,7 +6,7 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class TransactionDto extends DataTransferObject
 {
-    public TransactionDetails $transaction_details;
+    public TransactionDetails|null $transaction_details;
 
     /** @var \Sawirricardo\Midtrans\Dto\ItemDetails[] */
     public ?array $item_details = null;
